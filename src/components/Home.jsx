@@ -7,7 +7,7 @@ const videos = [
     views: "1M views",
     timestamp: "1 day ago",
     thumbnail: "https://www.w3schools.com/html/pic_trulli.jpg",
-    videoUrl: "https://www.youtube.com/embed/aqz-KE-bpKQ"
+    videoUrl: "https://www.youtube.com/embed/5j0WNclnsPk"
   },
   {
     title: "Sintel",
@@ -15,7 +15,7 @@ const videos = [
     views: "2M views",
     timestamp: "2 days ago",
     thumbnail: "https://www.w3schools.com/html/img_chania.jpg",
-    videoUrl: "https://www.youtube.com/embed/eRsGyueVLvQ"
+    videoUrl: "https://www.youtube.com/embed/09vxlqHK3ss"
   },
   {
     title: "Tears of Steel",
@@ -31,7 +31,7 @@ const videos = [
     views: "6M views",
     timestamp: "6 days ago",
     thumbnail: "https://www.w3schools.com/html/img_mountains.jpg",
-    videoUrl: "https://www.youtube.com/embed/XP7KpUgyqIc"
+    videoUrl: "https://www.youtube.com/embed/09vxlqHK3ss"
   },
   {
     title: "BBB Trailer",
@@ -39,7 +39,7 @@ const videos = [
     views: "7M views",
     timestamp: "1 week ago",
     thumbnail: "https://www.w3schools.com/html/img_lights.jpg",
-    videoUrl: "https://www.youtube.com/embed/YE7VzlLtp-4"
+    videoUrl: "https://www.youtube.com/embed/09vxlqHK3ss"
   },
   {
     title: "ED Trailer",
@@ -47,7 +47,7 @@ const videos = [
     views: "8M views",
     timestamp: "2 weeks ago",
     thumbnail: "https://www.w3schools.com/html/img_forest.jpg",
-    videoUrl: "https://www.youtube.com/embed/2P-CAXFUw6Q"
+    videoUrl: "https://www.youtube.com/embed/09vxlqHK3ss"
   },
   {
     title: "Big Buck Bunny (Short)",
@@ -55,7 +55,7 @@ const videos = [
     views: "9M views",
     timestamp: "3 weeks ago",
     thumbnail: "https://www.w3schools.com/html/img_lights.jpg",
-    videoUrl: "https://www.youtube.com/embed/aqz-KE-bpKQ"
+    videoUrl: "https://www.youtube.com/embed/09vxlqHK3ss"
   },
   {
     title: "Tears of Steel (Short)",
@@ -63,7 +63,7 @@ const videos = [
     views: "10M views",
     timestamp: "1 month ago",
     thumbnail: "https://www.w3schools.com/html/img_forest.jpg",
-    videoUrl: "https://www.youtube.com/embed/R6MlUcmOul8"
+    videoUrl: "https://www.youtube.com/embed/09vxlqHK3ss"
   },
 ];
 
