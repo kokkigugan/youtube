@@ -10,6 +10,7 @@ import {
   FaListAlt,
   FaPlay,
   FaClock as FaWatchLater,
+  FaBars
 } from "react-icons/fa";
 
 const Sidebar = ({ show, toggleSidebar }) => {
@@ -19,8 +20,9 @@ const Sidebar = ({ show, toggleSidebar }) => {
         className={`fixed inset-0 bg-black opacity-50 z-30 md:hidden ${show ? 'block' : 'hidden'}`}
         onClick={toggleSidebar}
       ></div>
-      <aside className={`bg-black text-white w-64 h-100vh fixed top-0 left-0 md:static z-40 transform ${show ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 transition-transform duration-300`}>
+      <aside className={`bg-black text-white w-64 h-auto fixed top-0 left-0 md:static z-40 transform ${show ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 transition-transform duration-300`}>
         <div className="p-4 text-2xl font-bold flex items-center space-x-2">
+          <FaBars className="w-6 h-6 cursor-pointer md:hidden" onClick={toggleSidebar} />
         </div>
         <nav className="mt-4">
           <ul>

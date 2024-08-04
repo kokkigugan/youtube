@@ -7,7 +7,7 @@ const videos = [
     views: "1M views",
     timestamp: "1 day ago",
     thumbnail: "https://www.w3schools.com/html/pic_trulli.jpg",
-    videoUrl: "https://download.blender.org/demo/movies/BBB/bbb_sunflower_1080p_30fps_normal.mp4"
+    videoUrl: "https://www.youtube.com/embed/aqz-KE-bpKQ"
   },
   {
     title: "Sintel",
@@ -15,7 +15,7 @@ const videos = [
     views: "2M views",
     timestamp: "2 days ago",
     thumbnail: "https://www.w3schools.com/html/img_chania.jpg",
-    videoUrl: "https://download.blender.org/demo/movies/Sintel.2010.1080p.mkv"
+    videoUrl: "https://www.youtube.com/embed/eRsGyueVLvQ"
   },
   {
     title: "Tears of Steel",
@@ -23,7 +23,7 @@ const videos = [
     views: "3M views",
     timestamp: "3 days ago",
     thumbnail: "https://www.w3schools.com/html/img_girl.jpg",
-    videoUrl: "https://download.blender.org/demo/movies/ToS/tears_of_steel_720p.mov"
+    videoUrl: "https://www.youtube.com/embed/R6MlUcmOul8"
   },
   {
     title: "Caminandes: Llamigos",
@@ -31,7 +31,7 @@ const videos = [
     views: "6M views",
     timestamp: "6 days ago",
     thumbnail: "https://www.w3schools.com/html/img_mountains.jpg",
-    videoUrl: "https://caminandes.com/wp-content/uploads/2016/06/Caminandes_Llamigos_720p.mp4"
+    videoUrl: "https://www.youtube.com/embed/XP7KpUgyqIc"
   },
   {
     title: "BBB Trailer",
@@ -39,7 +39,7 @@ const videos = [
     views: "7M views",
     timestamp: "1 week ago",
     thumbnail: "https://www.w3schools.com/html/img_lights.jpg",
-    videoUrl: "https://media.w3.org/2010/05/sintel/trailer.mp4"
+    videoUrl: "https://www.youtube.com/embed/YE7VzlLtp-4"
   },
   {
     title: "ED Trailer",
@@ -47,7 +47,7 @@ const videos = [
     views: "8M views",
     timestamp: "2 weeks ago",
     thumbnail: "https://www.w3schools.com/html/img_forest.jpg",
-    videoUrl: "https://media.w3.org/2010/05/sintel/trailer.webm"
+    videoUrl: "https://www.youtube.com/embed/2P-CAXFUw6Q"
   },
   {
     title: "Big Buck Bunny (Short)",
@@ -55,7 +55,7 @@ const videos = [
     views: "9M views",
     timestamp: "3 weeks ago",
     thumbnail: "https://www.w3schools.com/html/img_lights.jpg",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
+    videoUrl: "https://www.youtube.com/embed/aqz-KE-bpKQ"
   },
   {
     title: "Tears of Steel (Short)",
@@ -63,12 +63,16 @@ const videos = [
     views: "10M views",
     timestamp: "1 month ago",
     thumbnail: "https://www.w3schools.com/html/img_forest.jpg",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
+    videoUrl: "https://www.youtube.com/embed/R6MlUcmOul8"
   },
 ];
 
 const Home = () => {
-  const [hoveredVideo, setHoveredVideo] = useState(null);
+  const [playingVideo, setPlayingVideo] = useState(null);
+
+  const handleVideoClick = (index) => {
+    setPlayingVideo(index);
+  };
 
   return (
     <main className="container mx-auto px-4 py-8">
@@ -76,18 +80,19 @@ const Home = () => {
         {videos.map((video, index) => (
           <div
             key={index}
-            className="bg-white shadow rounded-lg overflow-hidden relative"
-            onMouseEnter={() => setHoveredVideo(index)}
-            onMouseLeave={() => setHoveredVideo(null)}
+            className="bg-white shadow rounded-lg overflow-hidden relative cursor-pointer"
+            onClick={() => handleVideoClick(index)}
           >
-            {hoveredVideo === index ? (
-              <video
+            {playingVideo === index ? (
+              <iframe
+                width="100%"
+                height="200"
                 src={video.videoUrl}
-                className="w-full h-48 object-cover"
-                autoPlay
-                loop
-                muted
-              />
+                title={video.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             ) : (
               <img
                 src={video.thumbnail}

@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
-import Sidebar from './components/Sidebar';
 import Header from './components/Header';
+import Sidebar from './components/Sidebar';
 import Home from './components/Home';
 
 
-
 const App = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(false);
 
   const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
+    setShowSidebar(!showSidebar);
   };
 
   return (
-    <div className="min-h-screen flex bg-gray-100">
-      <Sidebar show={sidebarOpen} toggleSidebar={toggleSidebar} />
-      <div className="flex-1 flex flex-col">
-        <Header toggleSidebar={toggleSidebar} />
-        <Home />
+    <div className="min-h-screen bg-gray-100">
+      <Header toggleSidebar={toggleSidebar} />
+      <div className="flex">
+        <Sidebar show={showSidebar} toggleSidebar={toggleSidebar} />
+        <div className="flex-1">
+          <Home />
+        </div>
       </div>
     </div>
   );
